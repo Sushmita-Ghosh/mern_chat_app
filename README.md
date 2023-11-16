@@ -24,3 +24,19 @@ Welcome to the Chat Application repository! This project is a simple and lightwe
    ```bash
    git clone https://github.com/your-username/chat-application.git
    cd chat-application
+   ```
+
+2. **Install dependencies:**
+ ```bash
+   npm install
+   ```
+
+3. **Run the application:**
+   ```bash
+  npm start
+   ```
+
+4. **Open the application:**
+  - Access the chat application at **http://localhost:3000** in your web browser.
+
+
