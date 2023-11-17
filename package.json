@@ -1,0 +1,25 @@
+{
+  "name": "lets-chat",
+  "version": "1.0.0",
+  "description": "Welcome to the Chat Application repository! This project is a simple and lightweight chat application that allows users to communicate in real-time.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sushmita-Ghosh/mern_chat_app.git"
+  },
+  "author": "Sushmita Ghosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sushmita-Ghosh/mern_chat_app/issues"
+  },
+  "homepage": "https://github.com/Sushmita-Ghosh/mern_chat_app#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "moongoose": "0.0.5",
+    "nodemon": "^3.0.1"
+  }
+}
