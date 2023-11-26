@@ -4,6 +4,7 @@ const { chats } = require("./data/data");
 const connectDB = require("./config/db");
 const colors = require("colors");
 const userRoutes = require("./routes/userRoutes");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 // configurations
 const app = express();
@@ -20,6 +21,10 @@ app.get("/", (req, res) => {
 
 // routes
 app.use("/api/user", userRoutes);
+
+// error handler
+app.use(notFound);
+app.use(errorHandler);
 
 // getting the PORT
 const PORT = process.env.PORT || 5000;
