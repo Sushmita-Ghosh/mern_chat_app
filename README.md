@@ -14,8 +14,8 @@ Welcome to the Chat Application repository! This project is a simple and lightwe
 ## Technologies Used
 
 - **Backend:** Node.js, Express.js, Socket.io
-- **Frontend:** HTML, CSS, JavaScript
-- **Database:** MongoDB (optional, if applicable)
+- **Frontend:** ReactJS, ChakraUI
+- **Database:** MongoDB 
 - **Authentication:** JSON Web Tokens (JWT)
 
 ## Getting Started
