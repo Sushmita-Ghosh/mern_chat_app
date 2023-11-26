@@ -1,13 +1,14 @@
+// creating schema for user
+
 const moongoose = require("mongoose");
 
 const userModel = new moongoose.Schema(
   {
     name: { type: String, required: true },
-    email: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     picture: {
       type: String,
-      required: true,
       default:
         "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
     },

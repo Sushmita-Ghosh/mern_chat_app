@@ -1,3 +1,4 @@
+// creating schema for message
 const moongoose = require("mongoose");
 
 const messageModel = new moongoose.Schema(
