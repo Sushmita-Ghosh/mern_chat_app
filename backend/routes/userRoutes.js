@@ -4,6 +4,7 @@ const { registerUser, authUser } = require("../controllers/userControllers");
 const router = express.Router();
 
 // to chain multiple requests we can use .route
+// or else we can use .get, .post
 
 // register user
 router.route("/").post(registerUser);

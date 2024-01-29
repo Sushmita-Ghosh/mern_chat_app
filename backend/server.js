@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 // routes
+// Why we are using use instead of get/post?  - as we will write all our routes in userRoutes
 app.use("/api/user", userRoutes);
 
 // error handler

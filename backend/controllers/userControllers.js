@@ -1,7 +1,7 @@
 // These all are the controllers for the user
 // functionalities - register, login, logout
 
-const asyncHandler = require("express-async-handler");
+const asyncHandler = require("express-async-handler"); // to handle async errors
 const generateToken = require("../config/generateToken");
 const User = require("../models/userModel");
 

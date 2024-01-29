@@ -3,7 +3,7 @@
 const moongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
-const userModel = new moongoose.Schema(
+const userSchema = new moongoose.Schema(
   {
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
@@ -17,13 +17,8 @@ const userModel = new moongoose.Schema(
   { timestamps: true }
 );
 
-// method for validating the password
-userModel.methods.matchPassword = async function (enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password);
-};
-
 // encryting the password before saving using bcrpytjs
-userModel.pre("save", async function (next) {
+userSchema.pre("save", async function (next) {
   if (!this.isModified) {
     next();
   }
@@ -32,6 +27,11 @@ userModel.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-const User = moongoose.model("User", userModel);
+// method for validating the password
+userSchema.methods.matchPassword = async function (enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+
+const User = moongoose.model("User", userSchema);
 
 module.exports = User;
