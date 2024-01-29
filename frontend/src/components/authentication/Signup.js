@@ -131,6 +131,7 @@ const Signup = () => {
 
       // store data in local storage
       localStorage.setItem("userInfo", JSON.stringify(data));
+      setLoading(false);
       history.push("/chats");
     } catch (error) {
       toast({
