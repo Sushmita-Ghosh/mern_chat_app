@@ -1,4 +1,4 @@
-# Let's Chat - Chat Application
+# Let's Chat 
 
 Welcome to the mern_chat_app repository! This project is a simple and lightweight chat application that allows users to communicate in real-time.
 
