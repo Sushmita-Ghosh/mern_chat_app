@@ -68,7 +68,27 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
+//get all users
+// /api/user?search=raha
+const getAllUsers = asyncHandler(async (req, res) => {
+  const keyword = req.query.search
+    ? {
+        //logical or if either name or email contains the search query in it true // case insensitive(i)
+        $or: [
+          { name: { $regex: req.query.search, $options: "i" } },
+          { email: { $regex: req.query.search, $options: "i" } },
+        ],
+      }
+    : {};
+
+  // find all users except the current user in the database { _id: { $ne: req.user._id } } --> not equal (ne)
+  // we need to authorise user for { _id: { $ne: req.user._id } } see -> authMiddleware file
+  const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
+  res.send(users);
+});
+
 module.exports = {
   registerUser,
   authUser,
+  getAllUsers,
 };
