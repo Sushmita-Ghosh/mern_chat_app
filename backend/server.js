@@ -4,6 +4,7 @@ const { chats } = require("./data/data");
 const connectDB = require("./config/db");
 const colors = require("colors");
 const userRoutes = require("./routes/userRoutes");
+const chatRoutes = require("./routes/chatRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 // configurations
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 // routes
 // Why we are using use instead of get/post?  - as we will write all our routes in userRoutes
 app.use("/api/user", userRoutes);
+app.use("/api/chat", chatRoutes);
 
 // error handler
 app.use(notFound);
