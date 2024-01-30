@@ -1,6 +1,10 @@
 const express = require("express");
 const { protect } = require("../middleware/authMiddleware");
-const { accessChat, fetchChats } = require("../controllers/chatController");
+const {
+  accessChat,
+  fetchChats,
+  createGroupChat,
+} = require("../controllers/chatController");
 
 const router = express.Router();
 
@@ -11,7 +15,7 @@ router.route("/").post(protect, accessChat);
 router.route("/").get(protect, fetchChats);
 
 //creating group chat
-// router.route("/group").post(protect, createGroupChat);
+router.route("/group").post(protect, createGroupChat);
 
 //to rename group
 // router.route("/rename").put(protect, renameGroup);
