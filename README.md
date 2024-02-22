@@ -1,13 +1,12 @@
-# Let's Chat 
+# ChitChatHub 🌐💬
 
-Welcome to the mern_chat_app repository! This project is a simple and lightweight chat application that allows users to communicate in real-time.
+ChitChatHub is a real-time messaging application that allows users to connect, communicate, and create conversations effortlessly.
 
 ## Features
 
-- Real-time messaging: Users can send and receive messages instantly.
-- User authentication: Secure user authentication to ensure privacy and data security.
-- Chat rooms: Users can create and join different chat rooms for organized conversations.
-- Emoji support: Express yourself with a wide range of emojis.
+- Real-time messaging: Users can send and receive messages instantly. 🚀
+- User authentication: Secure user authentication to ensure privacy and data security. 🔒
+- Chat rooms: Users can create and join different chat rooms for organized conversations. 🏠
 
 ## Technologies Used
 
@@ -20,8 +19,8 @@ Welcome to the mern_chat_app repository! This project is a simple and lightweigh
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/chat-application.git
-   cd chat-application
+   git clone 
+   cd mern_chat_app
    ```
 
 2. **Install dependencies:**
@@ -36,5 +35,29 @@ npm start
 
 5. **Open the application:**
   - Access the chat application at **http://localhost:3000** in your web browser.
+
+## Folder Structure:
+Folder Structure
+----------------
+
+*   📁 **client**: Frontend React application.
+    
+    *   📁 **src**: Source code.
+        
+        *   📁 **components**: React components.
+            
+        *   📁 **styles**: Styling files.
+            
+    *   📄 **package.json**: Frontend dependencies and scripts.
+        
+*   📁 **server**: Backend Node.js application.
+    
+    *   📁 **src**: Source code.
+        
+        *   📁 **routes**: Backend routes.
+            
+        *   📁 **controllers**: Backend controllers.
+            
+    *   📄 **package.json**: Backend dependencies and scripts.
 
 
