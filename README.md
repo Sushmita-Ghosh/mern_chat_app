@@ -67,4 +67,4 @@ Welcome to ChitChatHub 🚀 – where connecting with friends feels like a breez
 
 
 ----
-Embark on the ChatSphere journey – where every message carries a smile! 😊🚀
+Embark on the ChitCharHub journey – where every message carries a smile! 😊🚀
